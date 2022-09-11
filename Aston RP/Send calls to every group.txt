@@ -1,0 +1,12 @@
+local groups_ = {
+    "GN",
+    "DIR",
+    "GR",
+    "PN",
+    "SAMU",
+    "SP"
+}
+local event_ = game:GetService("ReplicatedStorage"):WaitForChild("SecoursReceivedEvent")
+for _, group in ipairs(groups_) do
+    event_:FireServer("", group, "Open me", "You... got... trolled")
+end

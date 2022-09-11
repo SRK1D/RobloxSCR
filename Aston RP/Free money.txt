@@ -1,0 +1,1 @@
+game:GetService("ReplicatedStorage").donationCheque:InvokeServer(-1e6, nil)

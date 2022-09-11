@@ -1,0 +1,16 @@
+local hook = nil
+hook = hookmetamethod(game, "__namecall", function(k, ...)
+    if k == game.ReplicatedStorage.CodeMetier and #({...}) == 2 then
+        local metier = ({...})[2]
+        local suc, _ = pcall(function()
+            local temp_ = game:GetService("Players").LocalPlayer.PlayerGui.Tab.Holder.Windows.Metiers.Metier["Éboueur"].Code.Teamin
+        end)
+        if suc ~= false then
+            local temp_ = game:GetService("Players").LocalPlayer.PlayerGui.Tab.Holder.Windows.Metiers.Metier["Éboueur"].Code.Teamin
+            temp_:FireServer(game:GetService("Teams")[metier])
+        end
+        wait(0.1)
+        game:GetService("ReplicatedStorage"):WaitForChild("respawnteam"):FireServer()
+    end
+    return hook(k, ...)
+end)

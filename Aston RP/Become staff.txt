@@ -1,0 +1,3 @@
+local temp_ = game:GetService("Players").LocalPlayer.PlayerGui.Tab.Holder.Windows.Metiers.Metier["Éboueur"].Code.Teamin
+temp_:FireServer(game:GetService("Teams")["Staff"])
+game:GetService("ReplicatedStorage"):WaitForChild("respawnteam"):FireServer()

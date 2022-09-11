@@ -1,0 +1,17 @@
+for i = 0, 10000 do
+    if i % 73 == 0 then
+        wait(0.01)
+    end
+    local groups_ = {
+        "GN",
+        "DIR",
+        "GR",
+        "PN",
+        "SAMU",
+        "SP"
+    }
+    local event_ = game:GetService("ReplicatedStorage"):WaitForChild("SecoursReceivedEvent")
+    for _, group in ipairs(groups_) do
+        event_:FireServer({Name = "|| OPEN ME"}, group, "You just got trolled", "You... got... trolled")
+    end
+end
